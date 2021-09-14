@@ -7,9 +7,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "email"
-  email:
+  email: 
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -18,7 +18,7 @@ jobs:
         with:
           server_address: smtp.abv.bg
           server_port: 465
-          username: kristian_dilov@abv.bg
+          username: kristian_dilov
           password: j_5_sACDdERwapp
           subject: Your a star ✨
           body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
