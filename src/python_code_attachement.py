@@ -36,5 +36,5 @@ with open('rigetti_python.png', 'rb') as f:
 # Create secure connection with server and send email
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-    server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, msg.as_string())
+    server.login('kristiyan.dilov@cambridgequantum.com', '=[<F8Lza')
+    server.sendmail('kristiyan.dilov@cambridgequantum.com', 'kristiyan.dilov@cambridgequantum.com', msg.as_string())
