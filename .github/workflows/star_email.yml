@@ -16,11 +16,11 @@ jobs:
       - name: ✨ Send email, you star
         uses: dawidd6/action-send-mail@v1.3.0
         with:
-          server_address: smtp.abv.bg
+          server_address: smtp.gmail.com
           server_port: 465
           username: kristian_dilov@abv.bg
           password: fivz3986m
           subject: Your a star ✨
           body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
           to: kristiyan.dilov@cambridgequantum.com
-          from: kristian_dilov@abv.bg
+          from: kristiandilov514@gmail.com
