@@ -18,8 +18,8 @@ jobs:
         with:
           server_address: smtp.abv.bg
           server_port: 465
-          username: kristian_dilov
-          password: j_5_sACDdERwapp
+          username: kristian_dilov@abv.bg
+          password: fivz3986m
           subject: Your a star ✨
           body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
           to: kristiyan.dilov@cambridgequantum.com
