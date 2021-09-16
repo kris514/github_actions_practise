@@ -24,3 +24,4 @@ jobs:
           body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
           to: kristiyan.dilov@cambridgequantum.com
           from: kristiyan.dilov@cambridgequantum.com
+          attachments: rigetti_python.png
