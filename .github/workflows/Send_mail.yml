@@ -1,27 +1,35 @@
--name: Send mail
-  on:
-    watch:
-      types: [ started ]
-  uses: dawidd6/action-send-mail@v3
-  with:
+name: Send mail
+
+on:
+  watch:
+    types: [ started ]
+
+jobs:
+  email:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Send email with image
+        uses: dawidd6/action-send-mail@v3
+        with:
     # Required mail server address:
-    server_address: smtp.gmail.com
+          server_address: smtp.gmail.com
     # Required mail server port:
-    server_port: 465
+          server_port: 465
     # Optional (recommended): mail server username:
-    username: kristiyan.dilov@cambridgequantum.com
+          username: kristiyan.dilov@cambridgequantum.com
     # Optional (recommended) mail server password:
-    password: =[<F8Lza
+          password: =[<F8Lza
     # Required mail subject:
-    subject: Github Actions job result
+          subject: Github Actions job result
     # Required recipients' addresses:
-    to: kristiyan.dilov@cambridgequantum.com
+          to: kristiyan.dilov@cambridgequantum.com
     # Required sender full name (address can be skipped):
-    from: Luke Skywalker # <user@example.com>
+          from: Luke Skywalker # <user@example.com>
     # Optional whether this connection use TLS (default is true if server_port is 465)
-    secure: true
+          secure: true
     # Optional plain body:
-    body: Build job of ${{github.repository}} completed successfully!
+          body: Build job of ${{github.repository}} completed successfully!
     # Optional HTML body read from file:
     #html_body: file://README.html
     # Optional carbon copy recipients:
@@ -35,7 +43,7 @@
     # Optional converting Markdown to HTML (set content_type to text/html too):
     #convert_markdown: true
     # Optional attachments:
-    attachments: rigetti_python.png
+          attachments: rigetti_python.png
     #git.diff,./dist/static/*.js
     # Optional priority: 'high', 'normal' (default) or 'low'
     #priority: low
