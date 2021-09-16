@@ -46,7 +46,7 @@ jobs:
     # Optional converting Markdown to HTML (set content_type to text/html too):
     #convert_markdown: true
     # Optional attachments:
-          attachments: folder/rigetti_python.png     
+          attachments: folder/cqc.jpg   
           #git.diff,./dist/static/*.js
     # Optional priority: 'high', 'normal' (default) or 'low'
     #priority: low
