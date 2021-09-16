@@ -20,13 +20,13 @@ jobs:
     # Required mail server port:
           server_port: 465
     # Optional (recommended): mail server username:
-          username: kristiyan.dilov@cambridgequantum.com
+          username: ${{ secrets.EMAIL }}
     # Optional (recommended) mail server password:
           password: =[<F8Lza
     # Required mail subject:
           subject: Github Actions job result
     # Required recipients' addresses:
-          to: kristiyan.dilov@cambridgequantum.com
+          to: ${{ secrets.EMAIL }}
     # Required sender full name (address can be skipped):
           from: Luke Skywalker # <user@example.com>
     # Optional whether this connection use TLS (default is true if server_port is 465)
