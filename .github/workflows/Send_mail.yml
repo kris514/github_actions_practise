@@ -22,7 +22,7 @@ jobs:
     # Optional (recommended): mail server username:
           username: ${{ secrets.EMAIL }}
     # Optional (recommended) mail server password:
-          password: =[<F8Lza
+          password: ${{ secrets.EMAIL_PASSWORD }}
     # Required mail subject:
           subject: Github Actions job result
     # Required recipients' addresses:
