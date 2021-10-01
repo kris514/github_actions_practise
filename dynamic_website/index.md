@@ -115,8 +115,8 @@ such as presentations
 </html>
 
 ## Coupling maps of devices used
-- **Google Architecture**: 
+**Google Architecture**
 ![Google Arch](https://github.com/kris514/github_actions_practise/blob/main/images/google%20arch.png)
 
-- **IBMQ toronto architecture**: 
+**IBMQ toronto architecture**
 ![Test Image 5](https://github.com/kris514/github_actions_practise/blob/main/images/ibmq_toronto.png)
