@@ -111,12 +111,18 @@ We will attempt to keep these results up to date, although you may wish to
 contact Dan to verify this before using the results for some other purpose,
 such as presentations
 
-</body>
-</html>
+
 
 ## Coupling maps of devices used
 **Google Architecture**
+
 ![Google Arch](https://github.com/kris514/github_actions_practise/blob/main/images/google%20arch.png)
 
 **IBMQ toronto architecture**
+  
+  
 ![Test Image 5](https://github.com/kris514/github_actions_practise/blob/main/images/ibmq_toronto.png)
+  
+  
+</body>
+</html>
