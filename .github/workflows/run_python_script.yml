@@ -19,11 +19,6 @@ jobs:
               pip install outdated
               pip install qiskit
               pip install pyquil
-              output=$(python release_mail_generator.py v2.21) 
-              echo "::set-output name=changelog::$output"
-          id: step1
               python version_warning.py
             
-        - name: Print the statement
-          run: echo "${{ steps.step1.outputs.changelog }}"
              
