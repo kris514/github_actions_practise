@@ -17,10 +17,11 @@ jobs:
 
         - uses: actions/checkout@v2
         - uses: actions/setup-python@v2
-        - run: python version_warning.py
+        - run: |
               pip install outdated
               pip install qiskit
               pip install pyquil
+              python version_warning.py
             
         - name: Print the statement
           run: echo python version_warning.py
