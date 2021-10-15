@@ -1,15 +1,16 @@
-name: run my warning via python
+name: Version_warning
     
- on:
-  watch:
-    types: [ started ]
+    
+on:
+     watch:
+        types: [ started ]
    
     
-    jobs:
-      build:
-        runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
     
-        steps:
-          - name: execute py script # run the run.py to get the latest data
-            run:  python version_warning.py
+    steps:
+      - name: execute py script # run the run.py to get the latest data
+        run:  python version_warning.py
              
