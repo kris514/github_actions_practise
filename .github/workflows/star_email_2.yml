@@ -40,7 +40,7 @@ jobs:
             username: kristiyan.dilov@cambridgequantum.com
             password: =[<F8Lza
             subject: Your a star ✨
-            body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
+            body: ${{ github.actor }} If you see this statement, this means that version warning has successfuly ran first inside ${{ github.repository }}
             to: kristiyan.dilov@cambridgequantum.com
             from: kristiyan.dilov@cambridgequantum.com
             attachments: rigetti_python.png
