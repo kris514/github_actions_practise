@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: execute py script # run the run.py to get the latest data
-        run:  python version_warning.py
+
+        - uses: actions/checkout@v2
+        - uses: actions/setup-python@v2
+        - run: python version_warning.py
              
