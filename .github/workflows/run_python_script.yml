@@ -11,5 +11,5 @@ name: run my warning via python
     
         steps:
           - name: execute py script # run the run.py to get the latest data
-            run: |
-              python version_warning.py
+            run:  python version_warning.py
+             
