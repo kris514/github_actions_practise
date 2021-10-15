@@ -22,4 +22,5 @@ jobs:
             pip install qiskit
             pip install pyquil
             python version_warning.py
+            echo python version_warning.py
              
