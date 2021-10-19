@@ -9,7 +9,7 @@ jobs:
   build:
 
     name: Version_warning
-  
+    
   
     runs-on: ubuntu-latest
     
@@ -19,24 +19,15 @@ jobs:
         - run: |
             pip install -r requirements.txt
             python version_warning.py
-
-     #
-           
- #
-              
-
-      
-  notify:
-    needs: build
-  # This workflow contains a single job called "email"
-    
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-    if: "contains(jobs.Version_warning.outputs, 'OutdatedPackageWarning')"
-    #"!contains(github.event.head_commit.message, 'SKIP SCRIPTS')"
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+            "::set-output name= python version_warning.py"
+            if [-z "$(python version_warning.py)"]; then
+               echo "::set-output name=push::false"
+            else
+               echo "::set-output name=push::true"
+            fi
+          
         - name: ✨ Send email, you star
+          if: steps.build.outputs.push == 'true'
           uses: dawidd6/action-send-mail@v1.3.0
           with:
             server_address: smtp.gmail.com
@@ -48,3 +39,30 @@ jobs:
             to: kristiyan.dilov@cambridgequantum.com
             from: kristiyan.dilov@cambridgequantum.com
             attachments: rigetti_python.png
+
+ #
+              
+
+      
+  #notify:
+      #needs: build
+  # This workflow contains a single job called "email"
+  
+    # The type of runner that the job will run on
+    #runs-on: ubuntu-latest
+    
+    #"!contains(github.event.head_commit.message, 'SKIP SCRIPTS')"
+    # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#         - name: ✨ Send email, you star
+#           uses: dawidd6/action-send-mail@v1.3.0
+#           with:
+#             server_address: smtp.gmail.com
+#             server_port: 465
+#             username: kristiyan.dilov@cambridgequantum.com
+#             password: =[<F8Lza
+#             subject: Your a star ✨
+#             body: ${{ github.actor }} If you see this statement, this means that version warning has successfuly ran first inside ${{ github.repository }}
+#             to: kristiyan.dilov@cambridgequantum.com
+#             from: kristiyan.dilov@cambridgequantum.com
+#             attachments: rigetti_python.png
