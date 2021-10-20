@@ -76,7 +76,7 @@ print(check_outdated('qiskit','0.30.0'))
 print(check_outdated('qiskit-aer','0.9.0'))
 print(check_outdated('qiskit-aqua','0.9.5'))
 print(check_outdated('qiskit-ibmq-provider','0.9.0'))
-print(check_outdated('qiskit-ignis','0.9.0'))
+print(check_outdated('qiskit-ignis','0.5.0'))
 print(check_outdated('qiskit-terra','0.18.2'))
 # outdated==0.2.1
 # pyquil==3.0.0
