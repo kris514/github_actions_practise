@@ -70,7 +70,24 @@ def check_outdated(package, version, repository_url='https://pypi.python.org/pyp
     return not is_latest, latest
 
 
-#print(check_outdated('qiskit','0.'))
+print(check_outdated('pyquil','3.0.0'))
+print(check_outdated('pytket-pyquil','0.16.0'))
+print(check_outdated('qiskit','0.30.0'))
+print(check_outdated('qiskit-aer','0.9.0'))
+print(check_outdated('qiskit-aqua','0.9.5'))
+print(check_outdated('qiskit-ibmq-provider','0.9.0'))
+print(check_outdated('qiskit-ignis','0.5.0'))
+print(check_outdated('qiskit-terra','0.18.2'))
+# outdated==0.2.1
+# pyquil==3.0.0
+# pytket-pyquil==0.16.0
+# pytket-pyquil==0.16.0
+# qiskit==0.30.0
+# qiskit-aer==0.9.0
+# qiskit-aqua==0.9.5
+# qiskit-ibmq-provider==0.16.0
+# qiskit-ignis==0.6.0
+# qiskit-terra==0.18.2
     
     #STEP1:
     #Fix the version of each of the packages requirements .txt (list of requirements)
