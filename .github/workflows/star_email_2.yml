@@ -20,10 +20,10 @@ jobs:
             pip install -r requirements.txt
             python version_warning.py
             "::set-output name= python version_warning.py"
-            if github.event.build.steps != ''; then
-               echo "::set-output name=push::false"
-            else
+            if [-z "$(python version_warning.py)"]; then
                echo "::set-output name=push::true"
+            else
+               echo "::set-output name=push::false"
             fi 
           
         - name: ✨ Send email, you star
