@@ -14,20 +14,23 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      
         - uses: actions/checkout@v2
         - uses: actions/setup-python@v2
-        - run: |
+        - name: 'Check_version'
+          run: |
+            
             pip install -r requirements.txt
             python version_warning.py
             
             if [-z "$(python version_warning.py)"]; then
-               echo "::set-output name=push::true"
-            else
                echo "::set-output name=push::false"
+            else
+               echo "::set-output name=push::true"
             fi 
           
         - name: ✨ Send email, you star
-          if: steps.build.outputs.push == 'true'
+          if: steps.Check_version.outputs.push == 'true'
           uses: dawidd6/action-send-mail@v1.3.0
           with:
             server_address: smtp.gmail.com
