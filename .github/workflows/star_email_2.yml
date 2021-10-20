@@ -19,7 +19,7 @@ jobs:
         - run: |
             pip install -r requirements.txt
             python version_warning.py
-            "::set-output name= python version_warning.py"
+            
             if github.event.jobs.build != ''; then
                echo "::set-output name=push::true"
             else
