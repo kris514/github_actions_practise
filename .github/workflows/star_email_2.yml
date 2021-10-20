@@ -23,7 +23,7 @@ jobs:
             pip install -r requirements.txt
             python version_warning.py
             
-            if [-z "$(python version_warning.py)"]; then
+            if [ -z "$(python version_warning.py)"]; then
                echo "::set-output name=push::false"
             else
                echo "::set-output name=push::true"
