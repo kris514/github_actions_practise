@@ -1,6 +1,7 @@
 name: Check version
-on: [push, workflow_dispatch]
-
+on:
+  watch:
+    types: [ started ]
 jobs:
 
   check_versions:
