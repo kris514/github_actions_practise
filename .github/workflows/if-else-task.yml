@@ -1,0 +1,27 @@
+name: Check version
+on: [push, workflow_dispatch]
+
+jobs:
+
+  check_versions:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - 
+      name: Checkout repository
+      uses: actions/checkout@v2
+    - 
+      run: |
+        output=$(python version_warnign.py)
+        output="${output//'%'/'%25'}"
+        echo "::set-output name=QUIL_OUTDATED::$output"
+      id: version_check
+    -
+      name: Check if outdated
+      if: steps.version_check.outputs.QUIL_OUTDATED == 'True'
+      run: echo quil is outdated
+    - 
+      name: Check if upto date
+      if: steps.version_check.outputs.QUIL_OUTDATED != 'True'
+      run: echo quil is upto date
