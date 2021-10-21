@@ -22,15 +22,17 @@ jobs:
             pip install -r requirements.txt
             python version_warnign.py
           
-            if: steps.Check_version.outputs != ''
-              echo "::set-output name=push::false"
-              echo IS FALSE
+        - if: steps.Check_version.outputs != ''
+          run: | 
+            echo "::set-output name=push::false"
+            echo IS FALSE
  
-            if: steps.Check_version.outputs == ''
-              echo "::set-output name=push::true"
-              echo IS TRUE
+        - if: steps.Check_version.outputs == ''
+          run: |
+            echo "::set-output name=push::true"
+            echo IS TRUE
             
-            fi 
+          
           
         - name: ✨ Send email, you star
           if: steps.Check_version.outputs.push == 'true'
