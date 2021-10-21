@@ -20,10 +20,21 @@ jobs:
         echo "::set-output name=QUIL_OUTDATED::$output"
       id: version_check
     -
-      name: Check if outdated
+      name: Check if outdated/ Send email
       if: steps.version_check.outputs.QUIL_OUTDATED == 'True'
-      run: echo quil is outdated
+    #run: echo quil is outdated
+      uses: dawidd6/action-send-mail@v1.3.0
+      with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: kristiyan.dilov@cambridgequantum.com
+          password: =[<F8Lza
+          subject: Your a star ✨
+          body: ${{ github.actor }} If you see this statement, this means that version warning has successfuly ran first inside ${{ github.repository }}
+          to: kristiyan.dilov@cambridgequantum.com
+          from: kristiyan.dilov@cambridgequantum.com
+          attachments: rigetti_python.png
     - 
-      name: Check if upto date
+      name: Check if upto date/ Dont sent email
       if: steps.version_check.outputs.QUIL_OUTDATED != 'True'
       run: echo quil is upto date
