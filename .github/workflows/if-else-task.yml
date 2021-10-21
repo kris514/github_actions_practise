@@ -21,7 +21,7 @@ jobs:
       id: version_check
     -
       name: Check if outdated/ Send email
-      if: steps.version_check.outputs.QUIL_OUTDATED == 'True'
+      if: steps.version_check.outputs.QUIL_OUTDATED == 'pyquil is out of date'
     #run: echo quil is outdated
       uses: dawidd6/action-send-mail@v1.3.0
       with:
@@ -33,7 +33,7 @@ jobs:
           body: ${{ github.actor }} If you see this statement, this means that version warning has successfuly ran first inside ${{ github.repository }}
           to: kristiyan.dilov@cambridgequantum.com
           from: kristiyan.dilov@cambridgequantum.com
-          attachments: rigetti_python.png
+
     - 
       name: Check if upto date/ Dont sent email
       if: steps.version_check.outputs.QUIL_OUTDATED != 'True'
