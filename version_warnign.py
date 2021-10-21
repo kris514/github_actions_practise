@@ -70,8 +70,8 @@ def check_outdated(package, version, repository_url='https://pypi.python.org/pyp
     return not is_latest
 
 
-print(check_outdated('pyquil','3.0.0')) #its not up to date
-#print(check_outdated('pytket-pyquil','0.16.0'))
+#print(check_outdated('pyquil','3.0.0')) #its not up to date
+print(check_outdated('pytket-pyquil','0.16.0'))
 # print(check_outdated('qiskit','0.30.0'))
 # print(check_outdated('qiskit-aer','0.9.0'))
 # print(check_outdated('qiskit-aqua','0.9.5'))
