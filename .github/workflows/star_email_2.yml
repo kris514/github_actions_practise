@@ -19,8 +19,9 @@ jobs:
         - uses: actions/setup-python@v2
         - name: 'Check_version'
           run: | 
-               python version_warnign.py
                pip install -r requirements.txt
+               python version_warnign.py
+              
                if: steps.Check_version.outputs != ''
                run: | 
                    echo "::set-output name=push::false"
