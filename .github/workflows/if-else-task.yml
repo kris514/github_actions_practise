@@ -21,7 +21,7 @@ jobs:
       id: version_check
     -
       name: Check if outdated/ Send email
-      if: steps.version_check.outputs.QUIL_OUTDATED == 'pyquil is out of date'
+      if: steps.version_check.outputs.QUIL_OUTDATED == 'True'
     #run: echo quil is outdated
       uses: dawidd6/action-send-mail@v1.3.0
       with:
