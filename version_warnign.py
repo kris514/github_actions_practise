@@ -74,7 +74,9 @@ packages = {'pyquil':'3.0.0', 'qiskit':'0.30.0'}
 
 for key, value in packages.items():
     if check_outdated(key, value) == True:
-        print(f'{key} is out of date')
+        print(True)
+    else:
+        print(False)
 
 
 #print(check_outdated('pyquil','3.0.0')) #its not up to date
