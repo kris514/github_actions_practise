@@ -71,13 +71,16 @@ def check_outdated(package, version, repository_url='https://pypi.python.org/pyp
 
 
 packages = {'pyquil':'3.0.0', 'qiskit':'0.30.0'}
-
+statements = []
 for key, value in packages.items():
     if check_outdated(key, value) == True:
-        print(True)
+        statements.append(True)
+        
     else:
-        print(False)
+        statements.append(False)
 
+if True in statements:
+    print(True)
 
 #print(check_outdated('pyquil','3.0.0')) #its not up to date
 #print(check_outdated('pytket-pyquil','0.16.0'))
