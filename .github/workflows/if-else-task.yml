@@ -14,6 +14,7 @@ jobs:
       uses: actions/checkout@v2
     - 
       run: |
+        pip install -r requirements.txt
         output=$(python version_warnign.py)
         output="${output//'%'/'%25'}"
         echo "::set-output name=QUIL_OUTDATED::$output"
