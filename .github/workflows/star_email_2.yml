@@ -23,10 +23,14 @@ jobs:
             python version_warnign.py
           
             if [ -z "$(python version_warnign.py)"]; then
-              run: echo "::set-output name=push::false"
+              run: |
+                echo "::set-output name=push::false"
+                echo IS FALSE
  
             else
-              run: echo "::set-output name=push::true"
+              run: |
+                echo "::set-output name=push::true"
+                echo IS TRUE
             
             fi 
           
