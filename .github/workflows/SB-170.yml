@@ -1,4 +1,4 @@
-name: Activate benchmarks if True
+name: CI Part 1 Check if True
 
 
 on:
@@ -33,10 +33,6 @@ jobs:
     -
       name: Check if outdated/ Dispatch/ Send email
       if: steps.version_check.outputs.final_output == 'True'
-      uses: dawidd6/action-send-mail@v1.3.0
-      with:
-      run: |
-         curl -XPOST -u "${{ secrets.PAT_USERNAME}}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/github_actions_practise/Send_mail.yml/dispatches --data '{"event_type": "build_application"}'
 
           
 
