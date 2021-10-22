@@ -1,8 +1,5 @@
 name: CI Part 1 Check if True
-  
- 
 on: workflow_dispatch 
-    
 
 jobs:
 
@@ -14,29 +11,29 @@ jobs:
     - 
       name: Checkout repository
       uses: actions/checkout@v2
-    - 
-      name: Set up Python
-      run: |
-        eval "$(pyenv init -)"
-        pyenv shell software_benchmarking-3.8
-    - 
-      name: Run script and save output
-      run: |
-        pip install outdated
-        pip install -r requirements.txt
-        output=$(python version_warning.py)
-        output="${output//'%'/'%25'}"
-        echo "::set-output name=final_output::$output"
-      id: version_check
-    -
-      name: Check if outdated/ Dispatch/ Send email
-      if: steps.version_check.outputs.final_output == 'True'
+#     - 
+#       name: Set up Python
+#       run: |
+#         eval "$(pyenv init -)"
+#         pyenv shell software_benchmarking-3.8
+#     - 
+#       name: Run script and save output
+#       run: |
+#         pip install outdated
+#         pip install -r requirements.txt
+#         output=$(python version_warning.py)
+#         output="${output//'%'/'%25'}"
+#         echo "::set-output name=final_output::$output"
+#       id: version_check
+#     -
+#       name: Check if outdated/ Dispatch/ Send email
+#       if: steps.version_check.outputs.final_output == 'True'
 
           
 
-    - 
-      name: Check if upto date/Dont send email
-      if: steps.version_check.outputs.final_output != 'True'
-      run: echo pyquil is upto date
+#     - 
+#       name: Check if upto date/Dont send email
+#       if: steps.version_check.outputs.final_output != 'True'
+#       run: echo pyquil is upto date
         
           
