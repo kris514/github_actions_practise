@@ -1,8 +1,6 @@
 name: Send mail
 
-on:
-  watch:
-    types: [ started ]
+on: repository_dispatch
 
 jobs:
   email:
