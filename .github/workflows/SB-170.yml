@@ -1,9 +1,7 @@
 name: CI Part 1 Check if True
   
  
-on:
-  watch:
-    types: [ started, workflow_dispatch ]
+on: [started, workflow_dispatch ]
     
 
 jobs:
