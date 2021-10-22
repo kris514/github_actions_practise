@@ -1,7 +1,7 @@
 name: CI Part 1 Check if True
   
  
-on: [started, workflow_dispatch ]
+on: workflow_dispatch 
     
 
 jobs:
