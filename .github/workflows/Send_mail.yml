@@ -1,7 +1,10 @@
-name: Send mail
+name: CI Part 2 Send email if True
 
-on: repository_dispatch
-
+on:
+  workflow_run:
+    workflows: ["CI Part 1 Check if True"]
+    types:
+      - steps.version_check.outputs.final_output == 'True'
 jobs:
   email:
     runs-on: ubuntu-latest
