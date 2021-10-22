@@ -3,14 +3,14 @@ name: CI Part 1 Check if True
  
 on:
   watch:
-    types: [ started ]
+    types: [ started, workflow_dispatch ]
     
 
 jobs:
 
   check_versions:
 
-    runs-on: [self-hosted, macos]
+    runs-on: ubuntu-latest
 
     steps:
     - 
