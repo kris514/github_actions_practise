@@ -1,6 +1,6 @@
 name: CI Part 2 Send email if True
   
-on: repository_dispatch
+on: workflow_dispatch
 
     
 jobs:
