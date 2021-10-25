@@ -43,7 +43,7 @@ jobs:
      
           add: 'requirements.txt'
           author_name: Kris
-          author_email: kristiyan.dilov@gmail.com
+          author_email: kristiyan.dilov@cambridgequantum.com
           #branch: some-branch
           default_author: github_actor
           message: 'Just a message'      
