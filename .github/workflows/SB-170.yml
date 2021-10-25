@@ -32,6 +32,6 @@ jobs:
     - 
       name: Check if upto date/Dont send email
       if: steps.version_check.outputs.final_output != 'True'
-      run: echo false
+      run: exit 1
         
           
