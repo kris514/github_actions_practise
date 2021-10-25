@@ -28,7 +28,7 @@ jobs:
     -
       name: Check if outdated/ Dispatch/ Send email
       if: steps.version_check.outputs.final_output == 'True'
-      run: echo true
+      run: exit 1
     - 
       name: Check if upto date/Dont send email
       if: steps.version_check.outputs.final_output != 'True'
