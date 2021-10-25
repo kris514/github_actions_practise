@@ -6,9 +6,9 @@ on:
     types: [completed]
     
 jobs:
-  email:
+  on-success:
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.version_check.outputs.final_output == 'True'
+    if: github.event.workflow_run.conclusion == 'success'
     steps:
        - name: Checkout code
          uses: actions/checkout@v2
