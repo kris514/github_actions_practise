@@ -6,7 +6,7 @@ on:
     types:
       - completed
 jobs:
-  on-success:
+  on-true:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'true' }}
     steps:
@@ -34,20 +34,6 @@ jobs:
             secure: true
     # Optional plain body:
             body: Build job of ${{github.repository}} completed successfully!
-    # Optional HTML body read from file:
-    #html_body: file://README.html
-    # Optional carbon copy recipients:
-    #cc: kyloren@example.com,leia@example.com
-    # Optional blind carbon copy recipients:
-    #bcc: r2d2@example.com,hansolo@example.com
-    # Optional recipient of the email response:
-    #reply_to: luke@example.com
-    # Optional unsigned/invalid certificates allowance:
-    #ignore_cert: true
-    # Optional converting Markdown to HTML (set content_type to text/html too):
-    #convert_markdown: true
-    # Optional attachments:
+
             attachments: folder/cqc.jpg   
-          #git.diff,./dist/static/*.js
-    # Optional priority: 'high', 'normal' (default) or 'low'
-    #priority: low
+ 
