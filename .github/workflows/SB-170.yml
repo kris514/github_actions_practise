@@ -28,10 +28,10 @@ jobs:
     -
       name: Check if outdated/ Dispatch/ Send email
       if: steps.version_check.outputs.final_output == 'True'
-      run: echo pyqil is out of date
+      run: echo true
     - 
       name: Check if upto date/Dont send email
       if: steps.version_check.outputs.final_output != 'True'
-      run: echo pyquil is upto date
+      run: echo false
         
           
