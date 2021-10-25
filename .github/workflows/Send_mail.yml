@@ -3,10 +3,10 @@ name: CI Part 2 Send email if True
 on:
   workflow_run:
     workflows: ["CI Part 1 Check if True"]
-    types:
-      - completed
+    types: [completed]
+    
 jobs:
-  on-true:
+  email:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'true' }}
     steps:
