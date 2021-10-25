@@ -30,9 +30,9 @@ jobs:
       if: steps.version_check.outputs.final_output == 'True'
       run: |
         echo True
-        pip install pyquil
-        pip install qiskit
-        pip install pytket
+        pip install pyquil --upgrade
+        pip install qiskit --upgrade
+        pip install pytket --upgrade
         pip freeze > requirements.txt  
         add: 'src'
         author_name: Kris
