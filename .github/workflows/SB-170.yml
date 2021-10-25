@@ -33,7 +33,7 @@ jobs:
         pip install pyquil --upgrade
         pip install qiskit --upgrade
         pip install pytket --upgrade
-        pip freeze > requirements.txt  
+        python -m pip freeze > requirements.txt 
         add: 'src'
         author_name: Kris
         author_email: kristiyan.dilov@gmail.com
