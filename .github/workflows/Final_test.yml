@@ -1,7 +1,5 @@
 name: Check version/ Send email/ update requirements 
-on:
-  schedule:
-    - cron: '0 0 * * 0-4'
+on: workflow_dispatch 
 
 jobs:
 
