@@ -50,17 +50,18 @@ jobs:
         pip install pytket --upgrade
         python -m pip freeze > requirements.txt
     - 
-       uses: EndBug/add-and-commit@v7 
-       with:
-          add: 'requirements.txt'
-          author_name: Kris
-          author_email: kristiyan.dilov@cambridgequantum.com
-          default_author: github_actor
-          message: 'Just a message'      
-          
-    - 
       name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
+#     - 
+#        uses: EndBug/add-and-commit@v7 
+#        with:
+#           add: 'requirements.txt'
+#           author_name: Kris
+#           author_email: kristiyan.dilov@cambridgequantum.com
+#           default_author: github_actor
+#           message: 'Just a message'      
+          
+    
 
     - 
       name: Check if upto date/Dont send email
