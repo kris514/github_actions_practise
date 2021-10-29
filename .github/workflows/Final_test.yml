@@ -60,7 +60,7 @@ jobs:
           
     - 
       name: Create Pull Request
-      uses: peter-evans/create-pull-request@v
+      uses: peter-evans/create-pull-request@v3
 
     - 
       name: Check if upto date/Dont send email
