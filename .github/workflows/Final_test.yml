@@ -65,7 +65,8 @@ jobs:
        uses: peter-evans/create-pull-request@v3
        with:
             author_name: Kris <kristiyan.dilov@cambridgequantum.com>
-            branch: Update_txt_file
+            #branch: Update_txt_file
+            title: Updated requirements.txt file
             committer: Kris <kristiyan.dilov@cambridgequantum.com>
     - 
        name: Check outputs
