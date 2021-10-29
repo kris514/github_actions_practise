@@ -57,7 +57,7 @@ jobs:
           author_email: kristiyan.dilov@cambridgequantum.com
           default_author: github_actor
           message: 'Just a message'      
-          push: true
+          push: false
 
     - 
       name: Check if upto date/Dont send email
