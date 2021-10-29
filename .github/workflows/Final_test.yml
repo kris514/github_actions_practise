@@ -67,6 +67,7 @@ jobs:
             author_name: Kris <kristiyan.dilov@cambridgequantum.com>
             #branch: Update_txt_file
             title: Updated requirements.txt file
+            commit-message: Packages were outdated so I updated them
             committer: Kris <kristiyan.dilov@cambridgequantum.com>
     - 
        name: Check outputs
